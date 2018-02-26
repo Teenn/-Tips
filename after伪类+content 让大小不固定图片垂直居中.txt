@@ -1,0 +1,17 @@
+关于让大小不固定的图片垂直居中，我之前写过篇研究性的文章“大小不固定的图片、多行文字的水平垂直居中”，里面详细展示了多种图片水平垂直居中方法，各个方法的好坏你自己评判。
+
+这里介绍的:after伪类+content实现的图片垂直居中方法是我目前为止个人觉得最好，最使用的方法。ok，测试CSS代码如下（绿色部分为功能相关CSS代码）：
+
+.pic_box{width:300px; height:300px; background-color:#beceeb; font-size:0; *font-size:200px; text-align:center;}
+.pic_box img{vertical-align:middle;}
+.pic_box:after{display:inline-block; width:0; height:100%; content:"center"; vertical-align:middle; overflow:hidden;}
+相应的HTML代码如下：
+
+<div class="pic_box">
+    <img data-src="http://image.zhangxinxu.com/image/study/s/s256/mm1.jpg" />
+</div>
+
+
+与清除浮动影响类似，IE6/7不支持:after伪类，我们可以用另外的方法让图片垂直居中，例如font-size方法，设一个比较大点的字体大小，IE6/7就可以实现图片垂直对齐了，至于其他浏览器，就用:after伪类+content内容生成一个vertical-align:middle属性的元素就可以了。这是我对“大小不固定的图片、多行文字的水平垂直居中”一文中提到的最后的方法的又一次提升。
+
+目前的测试结果是：所有浏览器都垂直居中，不过Chrome浏览器的水平居中貌似左边偏移了点，这是因为Chrome浏览器font-size:0，不能消除空格产生的水平距离的原因。这或许是唯一点瑕疵吧。

@@ -1,0 +1,2 @@
+<div style="overflow:auto;width:100%;">
+<table style="table-layout:fixed;">

@@ -1,0 +1,2 @@
+webview.getSettings().setTextZoom(100);
+WebView加上这个设置后,WebView里的字体就不会随系统字体大小设置发生变化了.

@@ -1,0 +1,30 @@
+对于模糊查询，一般都是传关键字给后端，由后端来做。但是有时候一些轻量级的列表前端来做可以减少ajax请求，在一定程度上提高用户体验。废话不多说，直接上代码。
+
+//字符串方法indexOf
+var len = list.length;
+var arr = [];
+for(var i=0;i<len;i++){
+    //如果字符串中不包含目标字符会返回-1
+    if(list[i].indexOf(keyWord)>=0){
+        arr.push(list[i]);
+    }
+}
+return arr;
+
+//正则表达式
+var len = list.length;
+var arr = [];
+var reg = new RegExp(keyWord);
+for(var i=0;i<len;i++){
+    //如果字符串中不包含目标字符会返回-1
+    if(list[i].match(reg)){
+        arr.push(list[i]);
+    }
+}
+return arr;
+
+首先要明白什么是模糊查询（废话又来了），就是根据关键字把列表中符合关键字的罗列出来（当然这里只做了最简单的），也就是要检查列表的每一项中是否含有关键字，因此抽象一下就是一个字符串中是否含有某个字符或者字符串。
+
+有了思路，接下来就是去实现了，用什么方法呢，学js的基本数据类型时我们会发现String有很多方法，其中有个方法string.indexOf('');这个方法是找出字符串中某个字符的位置，而如果没有目标字符会返回-1。所以我们可以用这个方法去检查列表中每一项是否含有关键字。接下来就是很强大的RegExp，正则表达式去匹配字符串的目标字符，这里用了match方法，匹配不到返回空，当然其他几个方法也有实现方式，此处不再罗列。
+
+最后，demo地址：https://github.com/Stevenzwzhai/plugs,欢迎大家一起来写插件，纯原生js实现，star一下最好了！

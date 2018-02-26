@@ -1,0 +1,39 @@
+HTML
+<h4 id="info" class="fade-in-up" style="height: 24px; width: 420px; margin: 0; white-space:nowrap;text-overflow:ellipsis;overflow: hidden;">
+     <a ng-click="gotab()">
+           <i class="glyphicon glyphicon-volume-up"></i>
+           <span >&nbsp;最新公告：</span>
+           <span class="text-black-color">&nbsp;{{info.NoticeName}}&nbsp;&nbsp;&nbsp;{{info.StartTime}}</span>
+     </a>
+</h4>
+
+JS
+var i = 0
+var time = 3000
+var timer 
+$scope.fade = function(){
+	timer = setInterval(function(){
+		i++
+		if(i > $scope.infos.length-1) i = 0
+		$scope.info = $scope.infos[i]
+		$scope.$apply()
+		angular.element("#info").removeClass("ng-leave").addClass("ng-enter")
+		$timeout(function(){
+			angular.element("#info").removeClass("ng-enter").addClass("ng-leave")
+		},time-450)
+	},time)
+}
+$scope.fade();
+
+CSS
+.fade-in-up.ng-enter {
+  -webkit-animation: fadeInUp 0.5s;
+          animation: fadeInUp 0.5s;
+}
+
+.fade-in-up.ng-leave {
+  -webkit-animation: fadeOutUp 0.5s;
+          animation: fadeOutUp 0.5s;
+}
+
+var url=location.href.indexOf("?rand=")==-1?location.href:location.href.substring(0,location.href.indexOf("?rand="));

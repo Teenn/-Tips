@@ -1,0 +1,4 @@
+/* 下面这个是左浮动，不改变DOM位置的流体布局写法 */
+.mib_full_float { width: 100%; float: left; }
+.mib_feed_flow { margin-right: 76px; } 
+.mib_head_l { width: 56px; float: left; margin-left: -56px;}

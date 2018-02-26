@@ -1,0 +1,31 @@
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    var h = 0
+  $(".btn1").click(function(){
+h=$("#cc").scrollTop();
+    h += 100;
+    $("div").scrollTop(h);
+  });
+  $(".btn2").click(function(){
+h=$("#cc").scrollTop();
+    if(h<=0){
+        return;
+    }
+    h -= 100;
+    $("div").scrollTop(h);
+  });
+});
+</script>
+</head>
+<body>
+<div id="cc" style="border:1px solid black;width:200px;height:200px;overflow:auto">
+This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.
+</div>
+<button class="btn1">down</button>
+<br />
+<button class="btn2">up</button>
+</body>
+</html>

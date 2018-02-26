@@ -1,0 +1,8 @@
+block 没设定宽度是不能 margin auto 来居中的，一个简单的办法是 display: table
+
+PS:
+
+display: table
+width: auto
+margin-left: auto
+margin-right: auto

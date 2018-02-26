@@ -1,0 +1,11 @@
+<input id="ifc" type="checkbox"><i></i>œ‘ æº∆ªÆ
+    $("#ifc").click(function(){
+                if(this.checked) {
+                    $scope.months = $scope.beifen;
+                    $scope.$apply();
+                }
+                else {
+                    $scope.months = $scope.uc;
+                    $scope.$apply();
+                }
+    })  

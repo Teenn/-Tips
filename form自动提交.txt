@@ -1,0 +1,3 @@
+当用户在一个表单的input标签按enter按钮时，浏览器会找到表单中的第一个提交按钮(submit button)，并触发click，同时提交表单。
+如果一个表单里没有任何submit button。当这个表单只有一个input元素时，在这个input标签按enter键会隐式触发表单提交，
+但表单有多个input标签时就不会触发。

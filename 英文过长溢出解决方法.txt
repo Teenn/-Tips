@@ -1,0 +1,1 @@
+ps:网上有些文章说，word-wrap:break-word 对长串英文不起作用，其实这是非常错误的，word-wrap:break-word照样能把一个长串英文或数字拆成多行。事实上，word-wrap:break-word与word-break:break-all共同点是都能把长单词强行断句，不同点是word-wrap:break-word会首先起一个新行来放置长单词，新的行还是放不下这个长单词则会对长单词进行强制断句；而word-break:break-all则不会把长单词放在一个新行里，当这一行放不下的时候就直接强制断句了。

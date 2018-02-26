@@ -1,0 +1,3 @@
+http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js
+http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js
+http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js

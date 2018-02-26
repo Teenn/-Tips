@@ -1,0 +1,6 @@
+for(var i=0;i<$scope.months.length;i++){
+      var insertText = "<th style=\"text-align:center;border:1px solid #ddd;\" >"+$scope.months[i].worktime1+"</th>"+
+      "<th style=\"text-align:center;border:1px solid #ddd;\" >"+$scope.months[i].delaytime1+"</th>"+
+      "<th style=\"text-align:center;border:1px solid #ddd;\" >"+$scope.months[i].resttime1+"</th>"; 
+      document.getElementById("inin").innerHTML = document.getElementById("inin").innerHTML+insertText;    
+      }
