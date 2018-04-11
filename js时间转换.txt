@@ -1,0 +1,33 @@
+Fri Mar 09 2018 17:37:22 GMT+0800 (中国标准时间)
+    zzdate3(params){
+        var d = new Date();
+        d.setTime(params);
+        var linyear = (d.getFullYear()).toString();
+        if(d.getMonth()+1 >= 10){
+            var linmonth = (d.getMonth()+1).toString();
+        }else{
+            var linmonth = "0"+ (d.getMonth()+1);
+        }
+        if(d.getDate() >= 10){
+            var linday = (d.getDate()).toString();
+        }else{
+            var linday = "0"+ d.getDate();
+        }
+        if(d.getHours() >= 10){
+            var linhour = (d.getHours()).toString();
+        }else{
+            var linhour = "0"+ d.getHours();
+        }
+        if(d.getMinutes() >= 10){
+            var linmin = (d.getMinutes()).toString();
+        }else{
+            var linmin = "0"+ d.getMinutes();
+        }
+        if(d.getSeconds() >= 10){
+            var linsec = (d.getSeconds()).toString();
+        }else{
+            var linsec = "0"+ d.getSeconds();
+        }
+        var PlanBeginTime = linyear + '-' + linmonth + '-' + linday + ' ' + linhour + ':' + linmin + ':' + linsec;
+        return PlanBeginTime;
+    }

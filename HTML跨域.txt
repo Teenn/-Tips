@@ -1,0 +1,16 @@
+1、如果请求的url是aspx页面，则需要在aspx页面中添加代码：Response.AddHeader("Access-Control-Allow-Origin", "*");
+
+2、如果请求的url是PHP页面，则需要在PHP页面中添加代码：header("Access-Control-Allow-Origin: *");
+
+3、如果请求的url是静态的html页面，则需要在页面中添加meta标签代码：<meta http-equiv="Access-Control-Allow-Origin" content="*" />
+
+如果服务器端可以确定是要被哪些域名访问，最好是能把以上代码中的“*”代替为具体的域名，这样做可以相应的增强安全性。
+
+
+如果还不行，就把这些都加上吧
+// 指定允许其他域名访问    
+header('Access-Control-Allow-Origin:*');    
+// 响应类型    
+header('Access-Control-Allow-Methods:POST');    
+// 响应头设置    
+header('Access-Control-Allow-Headers:x-requested-with,content-type');  
