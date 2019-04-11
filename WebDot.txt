@@ -1,0 +1,17 @@
+<form name="step1">
+<div class="modal-body">
+    <h4 style="text-align:center;">158</h4>
+    <input class="form-control" ng-model="username" placeholder="0140" maxlength="20" autofocus required/>
+</div>
+<div class="modal-footer" style="text-align:center;">                  
+    <button class="btn btn-default" ng-click="cancel()">取消</button>
+    <button class="btn btn-info" ng-disabled="step1.$invalid" ng-click="ok()" style="background-color:#1f8ccc;">确定</button>
+</div>
+</form>
+<script type="text/javascript">
+  $(".modal-dialog").css({
+    "margin-top": "62%" /*,
+    "left": "83%",
+    "margin-left": "-150px"*/
+    });
+</script>

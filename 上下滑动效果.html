@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box1{
+			position: relative;
+			top: 100px;
+			left: 100px;
+			width: 200px;
+			height: 200px;
+			border: 1px solid #ccc;
+			overflow: hidden;
+		}
+		.border1{
+			position: absolute;
+			top: 0;
+			left: 0px;
+			width: 100%;
+			height: 200%;
+			-webkit-transform: translateY(0px);   
+			transform: translateY(0px);
+			-webkit-transition:1s all ease;
+			transition:1s all ease;
+			z-index: 1;
+		}
+		.front1{
+			width: 100%;
+			height: 160px;
+			background: #ccc;
+			opacity: 0;
+		}
+		.back1{
+			width: 100%;
+			height: 240px;
+			background: #999;
+		}
+		.box1:hover .border1{
+			-webkit-transform: translateY(-20%);   
+			transform: translateY(-20%);
+			-webkit-transition:1s all ease;
+			transition:1s all ease;
+		}
+		.abc{
+			width: 100%;
+			height: 100%;
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	<div class="box1">
+		<div class="abc"></div>
+		<div class="border1">
+			<div class="front1">front</div>
+			<div class="back1">back</div>
+		</div>
+	</div>
+</body>
+</html>
